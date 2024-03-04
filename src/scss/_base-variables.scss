@@ -1,0 +1,28 @@
+:root {
+  // base
+  --font-family-base: 'Gilroy', sans-serif;
+  // --font-family-accent: "Yantramanav", sans-serif;
+  // --font-family-additional: "DMSans", sans-serif;
+
+  // border-radius
+  --border-radius-small: 10px;
+
+  // border-color
+  --border-color-dark: var(--color-dark);
+
+  // letter-spacing
+  --letter-spacing-small: 1.6px;
+
+  // outline
+  --outline-offset: 2px;
+
+  // transition
+  --timing: 0.3s;
+
+  // z-index-
+  --preloader-z-index: 1001;
+  --header-nav-z-index: 10;
+
+  // overlay
+  --overlay-shadow: rgba(0, 0, 0, 0.6);
+}

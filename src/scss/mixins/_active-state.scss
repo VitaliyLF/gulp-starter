@@ -1,0 +1,5 @@
+@mixin active {
+  &:active {
+    scale: 0.9;
+  }
+}

@@ -1,0 +1,62 @@
+@mixin shine {
+  @keyframes shine {
+    0% {
+      transform: translate(-100%, -25%) rotate(10deg);
+    }
+    20% {
+      transform: translate(100%, -25%) rotate(10deg);
+    }
+    100% {
+      transform: translate(100%, -25%) rotate(10deg);
+    }
+  }
+}
+
+@mixin updown {
+  @keyframes updown {
+    50% {
+      transform: translateY(-20px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin pulse {
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      transform: scale(0.91);
+      animation-timing-function: ease-in;
+    }
+    17% {
+      transform: scale(0.98);
+      animation-timing-function: ease-out;
+    }
+    33% {
+      transform: scale(0.87);
+      animation-timing-function: ease-in;
+    }
+    45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }
+}
+
+@mixin fillAnimation {
+  @keyframes fillAnimation {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@mixin focus {
+  &:focus {
+    outline: var(--outline-offset) solid var(--color-dark);
+    outline-offset: calc(var(--outline-offset) * 2);
+  }
+}

@@ -1,0 +1,7 @@
+.button {
+  transition: scale var(--timing) ease;
+
+  &:active {
+    scale: 0.9;
+  }
+}

@@ -1,0 +1,14 @@
+@import 'reset';
+@import 'base-variables';
+@import 'colors-variables';
+@import 'offset-system-variables';
+@import 'mixins';
+@import 'fonts';
+@import 'settings';
+@import 'unitary-classes';
+
+// page components connection
+@import './components/button';
+
+// page blocks connection
+@import './components/header';
