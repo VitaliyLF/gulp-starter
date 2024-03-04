@@ -109,3 +109,8 @@ Any project resources (assets) that do not have a corresponding folder should be
 ## Typographer
 
 For the correct display of text on the page was connected plugin typographer, which will automatically add unbroken spaces and other characters, so that the text everywhere displayed according to all the rules of the language.
+
+## Seo optimization
+
+The main index.html lists a brief excerpt and descriptions of each meta tag
+
