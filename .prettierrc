@@ -3,5 +3,8 @@
   "singleQuote": true,
   "endOfLine": "auto",
   "htmlWhitespaceSensitivity": "ignore",
-  "printWidth": 120
+  "printWidth": 120,
+  "trailingComma": "none",
+  "bracketSameLine": true,
+  "jsxBracketSameLine": true
 }

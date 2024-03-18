@@ -60,3 +60,11 @@
     }
   }
 }
+
+@mixin pulse-btn-bg {
+  @keyframes pulse-btn-bg {
+    100% {
+      box-shadow: 0 0 0 20px rgba(193, 244, 246, 0);
+    }
+  }
+}

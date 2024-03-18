@@ -50,17 +50,62 @@
 
 .skiplink {
   --skiplink-offset: 20px;
+  --skiplink-overlay-color: rgba(0, 0, 0, 0.6);
+  --skiplink-bgcolor: rgba(13, 32, 202, 0.473);
+  --skiplink-flashing-color: rgba(255, 255, 255, 0.5);
 
-  position: absolute;
-  top: -200px;
-  left: var(--skiplink-offset);
-  transition: top var(--timing) ease;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  font-family: inherit;
+  font-size: var(--skiplink-offset);
+  font-weight: 700;
+  background-color: var(--skiplink-overlay-color);
   color: var(--color-black);
+  z-index: var(--skiplink-z-index);
+  pointer-events: none;
+  transition: opacity var(--timing) ease, background-color var(--timing) ease;
+
+  &__text {
+    @include pulse-btn-bg;
+
+    position: relative;
+    top: var(--skiplink-offset);
+    left: var(--skiplink-offset);
+    padding: var(--skiplink-offset);
+    border-radius: var(--skiplink-offset);
+    background-color: var(--skiplink-bgcolor);
+    color: var(--color-light);
+    border: 2px solid var(--color-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running;
+    transition: box-shadow var(--timing);
+
+    &::before {
+      content: url(../img/skiplink-enter-icon.svg);
+      margin-left: var(--skiplink-offset);
+      order: 2;
+      width: var(--skiplink-offset);
+      height: var(--skiplink-offset);
+    }
+
+    &::after {
+      content: attr(data-title);
+      font-size: initial;
+      order: 3;
+      padding-top: 2px;
+      margin-left: 2px;
+    }
+  }
 
   &:focus {
-    top: var(--skiplink-offset);
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+    opacity: 1;
+
+    & .skiplink__text {
+      box-shadow: var(--skiplink-flashing-color) 0px 0px 0px 0px;
+    }
   }
 }
 
