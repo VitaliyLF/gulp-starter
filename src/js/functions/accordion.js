@@ -1,62 +1,42 @@
 class Accordion {
-  constructor(selector, options) {
+  constructor(accordion, options) {
     let defaultOptions = {
       isOpen: () => {},
       isClose: () => {},
-      speed: 300,
-      isControlEnabled: true,
+      speed: 300
     }
 
     this.options = Object.assign(defaultOptions, options)
-    this.accordion = document.querySelector(selector)
+    this.accordion = accordion
+    if (!this.accordion) return
     this.control = this.accordion.querySelector('.accordion__control')
     this.content = this.accordion.querySelector('.accordion__content')
-    this.isControlEnabled = this.options.isControlEnabled
     this.event()
     this.start()
   }
 
   start() {
-    if (this.accordion) {
-      if (!this.accordion.classList.contains('is-open')) {
-        this.close()
-      } else {
-        this.open()
-        if (this.isControlEnabled) {
-          this.control.classList.add('active')
-          this.control.textContent = 'Свернуть'
-        }
-      }
+    if (this.accordion.classList.contains('is-open')) {
+      this.open()
     }
   }
 
   event() {
-    if (this.accordion) {
-      this.accordion.addEventListener('click', (e) => {
-        this.accordion.classList.toggle('is-open')
+    if (this.control && this.content) {
+      this.control.addEventListener('click', (e) => {
+        this.accordion.classList.toggle('open')
 
-        if (this.accordion.classList.contains('is-open')) {
+        if (this.accordion.classList.contains('open')) {
           this.open()
-          if (this.isControlEnabled) {
-            this.control.classList.add('active')
-            this.control.textContent = 'Свернуть'
-          }
         } else {
           this.close()
-          if (this.isControlEnabled) {
-            this.control.classList.remove('active')
-            this.control.textContent = 'Подробнее'
-          }
         }
       })
     }
   }
 
   open() {
-    this.accordion.style.setProperty(
-      '--accordion-time',
-      `${this.options.speed / 1000}s`
-    )
+    this.accordion.style.setProperty('--accordion-time', `${this.options.speed / 1000}s`)
     this.accordion.classList.add('is-open')
     this.control.setAttribute('aria-expanded', true)
     this.content.setAttribute('aria-hidden', false)
@@ -73,4 +53,12 @@ class Accordion {
   }
 }
 
-export { Accordion }
+document.addEventListener('DOMContentLoaded', function () {
+  const accordions = document.querySelectorAll('.js-accordion')
+
+  accordions.forEach((accordion) => {
+    new Accordion(accordion, {
+      speed: 400
+    })
+  })
+})

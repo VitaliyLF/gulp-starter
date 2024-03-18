@@ -4,6 +4,7 @@
   background-color: var(--color-light);
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
 }
 
 .page__body {
@@ -23,6 +24,7 @@
 
 .scroll-lock {
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 .visually-hidden {
