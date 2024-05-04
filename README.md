@@ -21,10 +21,8 @@ You can then use any of the available build commands (the resulting files will b
 ├── src/                                      # Sources
 │   ├── js                                    # Scripts
 │   │   └── main.js                           # Main script
-│   │   ├── _vendor.js                        # library connection file
 │   │   ├── _components.js                    # component connection file
 │   │   ├── components                        # js components
-│   │   ├── vendor                            # folder for downloading local versions of libraries
 │   ├── scss                                  # Main styles folder
 │   │   └── main.scss                         # Main style file
 │   │   └── vendor.scss                       # File for connecting library styles from the vendor folder
@@ -51,7 +49,6 @@ You can then use any of the available build commands (the resulting files will b
 └── package.json                              # file with build settings and installed packages
 └── .editorconfig                             # file with code formatting settings
 └── .ecrc                                     # editorconfig-checker package settings file (excludes unnecessary folders)
-└── .stylelintrc                              # stylelint file
 └── .prettierrc                               # Prettier settings file
 └── README.md                                 # README build
 ```
