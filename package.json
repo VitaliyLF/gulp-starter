@@ -55,8 +55,6 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "aos": "^2.3.4",
-    "inputmask": "^5.0.8",
-    "just-validate": "^4.3.0",
     "rellax": "^1.12.1",
     "simplebar": "^6.2.5",
     "swiped-events": "^1.1.9",
