@@ -1,3 +1,11 @@
 {
-  "exclude": ["node_modules", "app", "vendor", "gulpfile.js", "package.json", ".stylelintrc", "\\.md$", "\\.php$"]
+  "exclude": [
+    "node_modules",
+    "app",
+    "vendor",
+    "gulpfile.js",
+    "package.json",
+    "\\.md$",
+    "\\.php$"
+  ]
 }

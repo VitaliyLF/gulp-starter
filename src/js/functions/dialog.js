@@ -1,5 +1,5 @@
-import { disableScroll } from '../functions/disable-scroll'
-import { enableScroll } from '../functions/enable-scroll'
+import { disableScroll } from '../functions/disable-scroll.js'
+import { enableScroll } from '../functions/enable-scroll.js'
 
 const modals = document.querySelectorAll('.js-modal')
 const openModals = document.querySelectorAll('.js-open-modal')

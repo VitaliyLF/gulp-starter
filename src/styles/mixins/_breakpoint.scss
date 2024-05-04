@@ -1,4 +1,4 @@
-@mixin big-desktop {
+@mixin large-desktop {
   @media (max-width: (1440px)) {
     @content;
   }

@@ -1,1 +1,1 @@
-import './_components'
+import './_components.js'

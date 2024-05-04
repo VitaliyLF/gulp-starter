@@ -1,1 +1,1 @@
-import './components/burger'
+import './components/burger.js'

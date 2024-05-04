@@ -1,17 +1,17 @@
 import JustValidate from 'just-validate'
-import Inputmask from 'inputmask'
+import Inputmask from '../../../node_modules/inputmask/dist/inputmask.es6.js'
 
-export const validateForms = (selector, rules, afterSend) => {
+export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
   const form = document?.querySelector(selector)
   const telSelector = form?.querySelector('input[type="tel"]')
 
   if (!form) {
-    console.error('Нет такого селектора!')
+    console.error('There is no such selector!')
     return false
   }
 
   if (!rules) {
-    console.error('Вы не передали правила валидации!')
+    console.error('You didnt pass the validation rules!')
     return false
   }
 
@@ -27,7 +27,7 @@ export const validateForms = (selector, rules, afterSend) => {
             const phone = telSelector.inputmask.unmaskedvalue()
             return phone.length === 10
           },
-          errorMessage: item.telError,
+          errorMessage: item.telError
         })
       }
     }
@@ -37,6 +37,12 @@ export const validateForms = (selector, rules, afterSend) => {
 
   for (let item of rules) {
     validation.addField(item.ruleSelector, item.rules)
+  }
+
+  if (checkboxes.length) {
+    for (let item of checkboxes) {
+      validation.addRequiredGroup(`${item.selector}`, `${item.errorMessage}`)
+    }
   }
 
   validation.onSuccess((ev) => {
@@ -50,7 +56,7 @@ export const validateForms = (selector, rules, afterSend) => {
           if (afterSend) {
             afterSend()
           }
-          console.log('Отправлено')
+          console.log('Send')
         }
       }
     }

@@ -1,5 +1,3 @@
-import vars from '../_vars'
-
 export const mobileCheck = () => {
   const userAgent = navigator.userAgent || navigator.vendor || window.opera
 
