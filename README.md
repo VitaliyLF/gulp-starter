@@ -18,12 +18,13 @@ You can then use any of the available build commands (the resulting files will b
 ## Folder and file structure
 
 ```
-├── gulp/                                     # Все настройки Gulp-сборки, разделенные по отдельным файлам
+├── gulp/                                     # All Gulp build settings, divided into separate files
 ├── src/                                      # Sources
 │   ├── js                                    # Scripts
 │   │   └── main.js                           # Main script
 │   │   ├── _components.js                    # component connection file
 │   │   ├── components                        # js components
+│   │   ├── _functions.js                     # File with ready-to-use js functions
 │   ├── styles                                # Main styles folder
 │   │   └── main.scss                         # Main style file
 │   │   └── vendor.scss                       # File for connecting library styles from the vendor folder
