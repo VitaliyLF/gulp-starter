@@ -18,12 +18,13 @@ You can then use any of the available build commands (the resulting files will b
 ## Folder and file structure
 
 ```
+├── gulp/                                     # Все настройки Gulp-сборки, разделенные по отдельным файлам
 ├── src/                                      # Sources
 │   ├── js                                    # Scripts
 │   │   └── main.js                           # Main script
 │   │   ├── _components.js                    # component connection file
 │   │   ├── components                        # js components
-│   ├── scss                                  # Main styles folder
+│   ├── styles                                # Main styles folder
 │   │   └── main.scss                         # Main style file
 │   │   └── vendor.scss                       # File for connecting library styles from the vendor folder
 │   │   └── _fonts.scss                       # File for connecting fonts (you can use myxin)
@@ -38,11 +39,11 @@ You can then use any of the available build commands (the resulting files will b
 │   │   ├── components                        # scss components
 │   │   ├── mixins                            # folder for saving finished mixins components
 │   │   ├── vendor                            # folder for storing local css styles of libraries
-│   ├── partials                              # folder for storing html partials of the page
+│   ├── components                            # folder for storing html partials of the page
 │   ├── pages                                 # folder for storing html pages of the project
 │   ├── img                                   # folder for storing img
 │   │   ├── svg                               # special folder for converting svg to sprite
-│   ├── resources                             # folder for storing other assets - php, video files, favicon, etc.
+│   ├── assets                                # folder for storing other assets - php, video files, favicon, etc.
 │   │   ├── fonts                             # folder for storing fonts in woff2 format
 │   └── index.html                            # Main html file
 └── gulpfile.js                               # Gulp configuration file
