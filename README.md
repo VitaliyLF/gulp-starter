@@ -18,12 +18,14 @@ You can then use any of the available build commands (the resulting files will b
 ## Folder and file structure
 
 ```
+├── gulp/                                     # All Gulp build settings, divided into separate files
 ├── src/                                      # Sources
 │   ├── js                                    # Scripts
 │   │   └── main.js                           # Main script
 │   │   ├── _components.js                    # component connection file
 │   │   ├── components                        # js components
-│   ├── scss                                  # Main styles folder
+│   │   ├── _functions.js                     # File with ready-to-use js functions
+│   ├── styles                                # Main styles folder
 │   │   └── main.scss                         # Main style file
 │   │   └── vendor.scss                       # File for connecting library styles from the vendor folder
 │   │   └── _fonts.scss                       # File for connecting fonts (you can use myxin)
@@ -38,11 +40,11 @@ You can then use any of the available build commands (the resulting files will b
 │   │   ├── components                        # scss components
 │   │   ├── mixins                            # folder for saving finished mixins components
 │   │   ├── vendor                            # folder for storing local css styles of libraries
-│   ├── partials                              # folder for storing html partials of the page
+│   ├── components                            # folder for storing html partials of the page
 │   ├── pages                                 # folder for storing html pages of the project
 │   ├── img                                   # folder for storing img
 │   │   ├── svg                               # special folder for converting svg to sprite
-│   ├── resources                             # folder for storing other assets - php, video files, favicon, etc.
+│   ├── assets                                # folder for storing other assets - php, video files, favicon, etc.
 │   │   ├── fonts                             # folder for storing fonts in woff2 format
 │   └── index.html                            # Main html file
 └── gulpfile.js                               # Gulp configuration file
@@ -79,15 +81,11 @@ JS code is better divided into components - small js-files that contain their ow
 
 The **main.js** file is the main file where all the others are connected.
 
-You can connect third-party libraries via npm, there is a **\_vendor.js** file for this purpose. Import the connections there.
-
-If some library is not in npm or you just need to connect something with a local file - put it in the **vendor** folder and import it in the same way, but with the path to the file.
-
 ## Working with fonts
 
 The build implements support for **woff2** format only
 
-Load the **woff2** files into the **resources/fonts** folder, and then call the `@font-face` mixin in the **\_fonts.scss** file.
+Load the **woff2** files into the **assets/fonts** folder, and then call the `@font-face` mixin in the **\_fonts.scss** file.
 
 Also, don't forget to put the same fonts in `<link preload>` in the html.
 
@@ -99,9 +97,9 @@ If you need to make an svg sprite, put the svg files needed for the sprite in th
 
 If you use the `gulp build` command, you will get minified images in the final **img** folder.
 
-## Working with other resources
+## Working with other assets
 
-Any project resources (assets) that do not have a corresponding folder should be stored in the **resources** folder. These can be video files, php files (such as form submission file), favicon and others.
+Any project assets that do not have a corresponding folder should be stored in the **resources** folder. These can be video files, php files (such as form submission file), favicon and others.
 
 ## Typographer
 
