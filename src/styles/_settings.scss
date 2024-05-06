@@ -1,3 +1,7 @@
+// * * * * * {
+//   outline: 3px solid orange;
+// }
+
 .page {
   height: 100%;
   font-family: var(--font-family-base);
@@ -6,6 +10,7 @@
   text-rendering: optimizeSpeed;
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
+  hyphens: auto;
 }
 
 .page__body {
