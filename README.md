@@ -15,6 +15,8 @@ You can then use any of the available build commands (the resulting files will b
 
 `gulp zip` - this command packs your finished code into a zip archive.
 
+`npm run deploy` - this command will create a temporary clone of the current repository, create a gh-pages branch if one doesn't already exist, copy over all files from the base path, or only those that match patterns from the optional src configuration, commit all changes, and push to the origin remote.
+
 ## Folder and file structure
 
 ```
