@@ -1,16 +1,19 @@
 // * * * * * {
 //   outline: 3px solid orange;
-// }
+// } //debug css
 
 .page {
   height: 100%;
   font-family: var(--font-family-base);
   background-color: var(--color-light);
+  font-synthesis: none;
   -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  hyphens: auto;
+  text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-  hyphens: auto;
 }
 
 .page__body {
