@@ -1,6 +1,8 @@
-## Getting started
+## Getting started <a href="https://github.com/VitaliyLF/gulp-starter/stargazers"><img src="https://img.shields.io/github/stars/VitaliyLF/gulp-starter" alt="Stars Badge"/></a>
 
 To work with this build, clone the entire contents of the repository `git clone <this repo>`
+
+
 
 After that, while in the main project folder, run the npm i command, which will automatically install all the necessary dependencies specified in the package.json file.
 You can then use any of the available build commands (the resulting files will be placed in the app folder in the root directory):<br>
