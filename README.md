@@ -1,21 +1,28 @@
 ## 📦 Getting started <a href="https://github.com/VitaliyLF/gulp-starter/stargazers"><img src="https://img.shields.io/github/stars/VitaliyLF/gulp-starter" alt="Stars Badge"/></a>
 
-To work with this build, clone the entire contents of the repository `git clone <this repo>`
+To work with this build, clone the entire contents of the repository using:<br>
 
-After that, while in the main project folder, run the npm i command, which will automatically install all the necessary dependencies specified in the package.json file.
-You can then use any of the available build commands (the resulting files will be placed in the app folder in the root directory):<br>
+`git clone <this repo>`
 
-`gulp` - The base command that starts the build for development.
+After cloning, navigate to the main project folder and run the following command to install all necessary dependencies specified in the package.json file:<br>
 
-`gulp build` - command to build the project. All assemblies are optimized and compressed for hosting.
+`npm i`
 
-`gulp cache` - this command should be run after `gulp build` if you need to upload new files to the hosting without using caching.
+Once the dependencies are installed, you can use any of the available build commands. The resulting files will be placed in the `app` folder in the root directory:
 
-`gulp backend` - command for building the backend part of the project. It contains only necessary elements and is not compressed, which makes it convenient for a backend developer.
+- `gulp` - The base command that starts the build process for development.
 
-`gulp zip` - this command packs your finished code into a zip archive.
+- `gulp build` - Builds the project, optimizing and compressing all files for hosting.
 
-`npm run deploy` - this command will create a temporary clone of the current repository, create a gh-pages branch if one doesn't already exist, copy over all files from the base path, or only those that match patterns from the optional src configuration, commit all changes, and push to the origin remote.
+- `gulp cache` - Run this command after gulp build if you need to upload new files to the hosting without using caching.
+
+- `gulp backend` - Builds the backend part of the project. This build contains only the necessary elements and is not compressed, making it convenient for backend development.
+
+- `gulp zip` - Packs your finished code into a zip archive.
+
+- `npm run deploy` - Creates a temporary clone of the current repository, generates a gh-pages branch if it doesn't already exist, copies all files from the base path (or those matching patterns from the optional src configuration), commits all changes, and pushes to the origin remote.
+
+By following these steps, you'll be set up to work with the project efficiently.
 
 ## 📝 Folder and file structure
 
