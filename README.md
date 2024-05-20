@@ -6,23 +6,43 @@ To work with this build, clone the entire contents of the repository using:<br>
 
 After cloning, navigate to the main project folder and run the following command to install all necessary dependencies specified in the package.json file:<br>
 
-`npm i`
+```shell
+npm i
+```
 
 Once the dependencies are installed, you can use any of the available build commands. The resulting files will be placed in the `app` folder in the root directory:
 
-- `gulp` - The base command that starts the build process for development.
+ ```shell
+  gulp
+``` 
+The base command that starts the build process for development.
 
-- `gulp build` - Builds the project, optimizing and compressing all files for hosting.
+ ```shell
+  gulp build
+``` 
+ Builds the project, optimizing and compressing all files for hosting.
 
-- `gulp cache` - Run this command after gulp build if you need to upload new files to the hosting without using caching.
+ ```shell
+  gulp cache
+``` 
+Run this command after gulp build if you need to upload new files to the hosting without using caching.
 
-- `gulp backend` - Builds the backend part of the project. This build contains only the necessary elements and is not compressed, making it convenient for backend development.
+ ```shell
+  gulp backend
+``` 
+Builds the backend part of the project. This build contains only the necessary elements and is not compressed, making it convenient for backend development.
 
-- `gulp zip` - Packs your finished code into a zip archive.
+ ```shell
+  gulp zip
+``` 
+Packs your finished code into a zip archive.
 
-- `npm run deploy` - Creates a temporary clone of the current repository, generates a gh-pages branch if it doesn't already exist, copies all files from the base path (or those matching patterns from the optional src configuration), commits all changes, and pushes to the origin remote.
+ ```shell
+  npm run deploy
+``` 
+Creates a temporary clone of the current repository, generates a gh-pages branch if it doesn't already exist, copies all files from the base path (or those matching patterns from the optional src configuration), commits all changes, and pushes to the origin remote.
 
-By following these steps, you'll be set up to work with the project efficiently.
+`By following these steps, you'll be set up to work with the project efficiently.`
 
 ## 📝 Folder and file structure
 
