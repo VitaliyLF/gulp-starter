@@ -45,7 +45,6 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 `By following these steps, you'll be set up to work with the project efficiently.`
 
 ## 📝 Folder and file structure
-
 ```
 ├── gulp/                                     # All Gulp build settings, divided into separate files
 ├── src/                                      # Sources
@@ -86,14 +85,13 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 
 ## 📁 Working with html
 
-With **gulp-file-include** you can split the html file into different templates, which should be stored in the **partials** folder.
+Using **gulp-file-include**, you can divide an HTML file into various templates, which should be stored in the **partials** folder.
 
 ---
 > [!NOTE]
-> **To insert html parts into the main file, use `@include('partials/filename.html')**
+> **To insert HTML parts into the main file, use `@include('partials/filename.html')**
 ---
-
-If you use the `gulp build` command, you will get one line minified html code for all html files.
+When you run the `gulp build` command, all HTML files will be minified into a single line of code.
 
 ## 📁 Working with CSS
 
