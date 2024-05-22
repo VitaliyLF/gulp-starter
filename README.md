@@ -94,16 +94,15 @@ Using **gulp-file-include**, you can divide an HTML file into various templates,
 When you run the `gulp build` command, all HTML files will be minified into a single line of code.
 
 ## 📁 Working with CSS
+The **SASS** preprocessor using **SCSS** syntax is employed during the build process.
 
-In build, the **sass** preprocessor in **scss** syntax is used.
+Styles written within **components** should be included in the **main.scss** file.
 
-Styles written in **components** should be plugged into **main.scss**.
+To incorporate third-party CSS files (libraries), place them in the **vendor** folder and reference them in the **\_vendor.scss**  file.
 
-To connect third-party css files (libraries) - put them in the **vendor** folder and connect them in the **\_vendor.scss** file.
-
-In the final folder **app/css** two files are created:
-- **main.css** - for page styles, 
-- **vendor.css** - for styles of all libraries used in the project.
+In the final folder  **app/css**, two files are generated:
+- **main.css** - for page styles,
+- **vendor.css**  - for the styles of all libraries used in the project.
 
 ## 📁 Working with JavaScript
 
