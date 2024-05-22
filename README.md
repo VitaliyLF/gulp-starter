@@ -52,42 +52,44 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 
 ## 📝 Folder and file structure
 
-```
-├── gulp/                                     # All Gulp build settings, divided into separate files
-├── src/                                      # Sources
-│   ├── js                                    # Scripts
-│   │   └── main.js                           # Main script
-│   │   ├── _components.js                    # component connection file
-│   │   ├── components                        # js components
-│   │   ├── _functions.js                     # File with ready-to-use js functions
-│   ├── styles                                # Main styles folder
-│   │   └── main.scss                         # Main style file
-│   │   └── vendor.scss                       # File for connecting library styles from the vendor folder
-│   │   └── _fonts.scss                       # File for connecting fonts (you can use myxin)
-│   │   └── _mixins.scss                      # File for connecting mixins from the mixins folder
-│   │   └── _vars.scss                        # File for writing css or scss variables
-│   │   └── _base-variables.scss              # File with global variables
-│   │   └── _colors-variables.scss            # File with color variables
-│   │   └── _offset-system-variables.scss     # File with offset system variables
-│   │   └── _reset.scss                       # File with global tag reset
-│   │   └── _settings.scss                    # File for writing global styles
-│   │   └── _unitary-classes.scss             # File with unitary classes that are reused throughout the project
-│   │   ├── components                        # scss components
-│   │   ├── mixins                            # folder for saving finished mixins components
-│   │   ├── vendor                            # folder for storing local css styles of libraries
-│   ├── components                            # folder for storing html partials of the page
-│   ├── pages                                 # folder for storing html pages of the project
-│   ├── img                                   # folder for storing img
-│   │   ├── svg                               # special folder for converting svg to sprite
-│   ├── assets                                # folder for storing other assets - php, video files, favicon, etc.
-│   │   ├── fonts                             # folder for storing fonts in woff2 format
-│   └── index.html                            # Main html file
-└── gulpfile.js                               # Gulp configuration file
-└── package.json                              # file with build settings and installed packages
-└── .editorconfig                             # file with code formatting settings
-└── .ecrc                                     # editorconfig-checker package settings file (excludes unnecessary folders)
-└── .prettierrc                               # Prettier settings file
-└── README.md                                 # README build
+```bash
+├── 📁gulp/                                     # All Gulp build settings, divided into separate files
+├── 📁src/                                      # Sources
+│   ├──📁js                                     # Scripts
+│   │   └──📁 components                        # js components
+│   │   ├──📁 functions.js                      # File with ready-to-use js functions
+│   │   ├──📃 _components.js                    # component connection file
+│   │   └──📃 main.js                           # Main script
+│   ├── 📁styles                                # Main styles folder
+│   │   └──📁components                         # scss components
+│   │   ├──📁mixins                             # folder for saving finished mixins components
+│   │   ├──📁vendor                             # folder for storing local css styles of libraries
+│   │   ├──📃 _base-variables.scss              # File with global variables
+│   │   ├──📃 _colors-variables.scss            # File with color variables
+│   │   ├──📃 _fonts.scss                       # File for connecting fonts (you can use myxin)
+│   │   ├──📃 _mixins.scss                      # File for connecting mixins from the mixins folder
+│   │   ├──📃 _offset-system-variables.scss     # File with offset system variables
+│   │   ├──📃 _reset.scss                       # File with global tag reset
+│   │   ├──📃 _settings.scss                    # File for writing global styles
+│   │   ├──📃 _unitary-classes.scss             # File with unitary classes that are reused throughout the project
+│   │   ├──📃 main.scss                         # Main style file
+│   │   └──📃 vendor.scss                       # File for connecting library styles from the vendor folder
+│   ├──📁 components                            # folder for storing html partials of the page
+│   │   └──📃components-name.html               # particle html component
+│   ├── 📁pages                                 # folder for storing html pages of the project
+│   │   └──📃page-name.html                     # html pages
+│   ├── 📁img                                   # folder for storing img
+│   │   └──📁svg                                # special folder for converting svg to sprite
+│   ├── 📁assets                                # folder for storing other assets - php, video files, favicon, etc.
+│   │   └──📁 fonts                             # folder for storing fonts in woff2 format
+│   │   ├──📃 fonts.woff2                       # fonts only woff2
+│   │   ├──📃 favicon.ico                       # favicon
+└── 📃 gulpfile.js                              # Gulp configuration file
+└── 📃 package.json                             # file with build settings and installed packages
+└── 📃 .editorconfig                            # file with code formatting settings
+└── 📃 .ecrc                                    # editorconfig-checker package settings file (excludes unnecessary folders)
+└── 📃 .prettierrc                              # Prettier settings file
+└── 📃 README.md                                # README build
 ```
 
 ## 📁 Working with html
