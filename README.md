@@ -98,7 +98,8 @@ Using **gulp-file-include**, you can divide an HTML file into various templates,
 
 ---
 
-> [!NOTE] > **To insert HTML parts into the main file, use `@include('../components/filename.html')**
+> [!NOTE] 
+> **To insert HTML parts into the main file, use `@include('../components/filename.html')`**
 
 ---
 
