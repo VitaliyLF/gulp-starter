@@ -85,7 +85,7 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 
 ## 📁 Working with html
 
-Using **gulp-file-include**, you can divide an HTML file into various templates, which should be stored in the **partials** folder.
+Using **gulp-file-include**, you can divide an HTML file into various templates, which should be stored in the **components** folder.
 
 ---
 > [!NOTE]
