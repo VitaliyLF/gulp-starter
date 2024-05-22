@@ -14,13 +14,15 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     width: 100%;
     height: var(--burger-line-height);
     background-color: currentColor;
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    transition:
+      transform 0.3s ease-in-out,
+      top 0.3s ease-in-out;
   }
 
   &::before {
@@ -46,13 +48,17 @@
     &::before {
       top: 50%;
       transform: rotate(45deg);
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      transition:
+        transform 0.3s ease-in-out,
+        top 0.3s ease-in-out;
     }
 
     &::after {
       top: 50%;
       transform: rotate(-45deg);
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      transition:
+        transform 0.3s ease-in-out,
+        top 0.3s ease-in-out;
     }
 
     .burger__line {

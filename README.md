@@ -12,39 +12,46 @@ npm i
 
 Once the dependencies are installed, you can use any of the available build commands. The resulting files will be placed in the `app` folder in the root directory:
 
- ```shell
-  gulp
-``` 
+```shell
+ gulp
+```
+
 The base command that starts the build process for development.
 
- ```shell
-  gulp build
-``` 
- Builds the project, optimizing and compressing all files for hosting.
+```shell
+ gulp build
+```
 
- ```shell
-  gulp cache
-``` 
+Builds the project, optimizing and compressing all files for hosting.
+
+```shell
+ gulp cache
+```
+
 Run this command after gulp build if you need to upload new files to the hosting without using caching.
 
- ```shell
-  gulp backend
-``` 
+```shell
+ gulp backend
+```
+
 Builds the backend part of the project. This build contains only the necessary elements and is not compressed, making it convenient for backend development.
 
- ```shell
-  gulp zip
-``` 
+```shell
+ gulp zip
+```
+
 Packs your finished code into a zip archive.
 
- ```shell
-  npm run deploy
-``` 
+```shell
+ npm run deploy
+```
+
 Creates a temporary clone of the current repository, generates a gh-pages branch if it doesn't already exist, copies all files from the base path (or those matching patterns from the optional src configuration), commits all changes, and pushes to the origin remote.
 
 `By following these steps, you'll be set up to work with the project efficiently.`
 
 ## 📝 Folder and file structure
+
 ```
 ├── gulp/                                     # All Gulp build settings, divided into separate files
 ├── src/                                      # Sources
@@ -88,21 +95,25 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 Using **gulp-file-include**, you can divide an HTML file into various templates, which should be stored in the **components** folder.
 
 ---
-> [!NOTE]
-> **To insert HTML parts into the main file, use `@include('../components/filename.html')**
+
+> [!NOTE] > **To insert HTML parts into the main file, use `@include('../components/filename.html')**
+
 ---
+
 When you run the `gulp build` command, all HTML files will be minified into a single line of code.
 
 ## 📁 Working with CSS
+
 The **SASS** preprocessor using **SCSS** syntax is employed during the build process.
 
 Styles written within **components** should be included in the **main.scss** file.
 
-To incorporate third-party CSS files (libraries), place them in the **vendor** folder and reference them in the **\_vendor.scss**  file.
+To incorporate third-party CSS files (libraries), place them in the **vendor** folder and reference them in the **\_vendor.scss** file.
 
-In the final folder  **app/css**, two files are generated:
+In the final folder **app/css**, two files are generated:
+
 - **main.css** - for page styles,
-- **vendor.css**  - for the styles of all libraries used in the project.
+- **vendor.css** - for the styles of all libraries used in the project.
 
 ## 📁 Working with JavaScript
 
@@ -139,4 +150,3 @@ For the correct display of text on the page was connected plugin typographer, wh
 ## 📁 Seo optimization
 
 The main index.html lists a brief excerpt and descriptions of each meta tag
-
