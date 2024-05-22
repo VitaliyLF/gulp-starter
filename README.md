@@ -52,7 +52,7 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 
 ## 📝 Folder and file structure
 
-```bash
+```
 ├── 📁gulp/                                     # All Gulp build settings, divided into separate files
 ├── 📁src/                                      # Sources
 │   ├──📁js                                     # Scripts
