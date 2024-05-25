@@ -1,10 +1,11 @@
 {
   "semi": false,
   "singleQuote": true,
-  "endOfLine": "auto",
+  "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "ignore",
   "printWidth": 120,
   "trailingComma": "none",
   "bracketSameLine": true,
-  "jsxBracketSameLine": true
+  "jsxBracketSameLine": true,
+  "insertFinalNewline": true
 }
