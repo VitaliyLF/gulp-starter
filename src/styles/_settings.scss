@@ -72,40 +72,51 @@
 
 .skiplink {
   --skiplink-offset: 20px;
-  --skiplink-overlay-color: rgba(0, 0, 0, 0.6);
-  --skiplink-bgcolor: rgba(13, 32, 202, 0.473);
-  --skiplink-flashing-color: rgba(255, 255, 255, 0.5);
+  --skiplink-bg-color: var(--color-medbox-green, #02836f);
+  --skiplink-overlay-color: hsl(0, 0%, 0%);
+  --skiplink-flashing-color: hsl(0, 0%, 100%);
+  --skiplink-overlay-color-mix-a60: color-mix(
+    in srgb,
+    var(--skiplink-overlay-color),
+    transparent 40%
+  );
+  --skiplink-flashing-color-mix-a50: color-mix(
+    in srgb,
+    var(--skiplink-flashing-color),
+    transparent 50%
+  );
+  --skiplink-z-index: 900;
 
   position: fixed;
   inset: 0;
   opacity: 0;
-  font-family: inherit;
+  font-family: var(--font-family-additional);
   font-size: var(--skiplink-offset);
   font-weight: 700;
-  background-color: var(--skiplink-overlay-color);
+  background-color: var(--skiplink-overlay-color-mix-a60, hsla(0, 0%, 0%, 0.6));
   color: var(--color-black);
   z-index: var(--skiplink-z-index);
   pointer-events: none;
-  transition:
-    opacity var(--timing) ease,
-    background-color var(--timing) ease;
+  transition: opacity var(--timing, 0.3s) ease,
+    background-color var(--timing, 0.3s) ease;
 
   &__text {
     @include pulse-btn-bg;
 
     position: relative;
-    top: var(--skiplink-offset);
+    top: calc(var(--skiplink-offset) * 2);
     left: var(--skiplink-offset);
     padding: var(--skiplink-offset);
     border-radius: var(--skiplink-offset);
-    background-color: var(--skiplink-bgcolor);
-    color: var(--color-light);
-    border: 2px solid var(--color-light);
+    background-color: var(--skiplink-bg-color);
+    color: var(--color-light, #fff);
+    border: 2px solid var(--color-light, #fff);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running;
-    transition: box-shadow var(--timing);
+    animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal
+      none running;
+    transition: box-shadow var(--timing, 0.3s);
 
     &::before {
       content: url(../img/skiplink-enter-icon.svg);
@@ -128,7 +139,8 @@
     opacity: 1;
 
     & .skiplink__text {
-      box-shadow: var(--skiplink-flashing-color) 0px 0px 0px 0px;
+      box-shadow: var(--skiplink-flashing-color-mix-a50, hsla(0, 0%, 100%, 0.5))
+        0px 0px 0px 0px;
     }
   }
 }
@@ -137,9 +149,7 @@
   @include lg {
     opacity: 0;
     visibility: hidden;
-    transition:
-      opacity var(--timing) ease,
-      visibility var(--timing) ease;
+    transition: opacity var(--timing) ease, visibility var(--timing) ease;
     z-index: 1;
 
     &--active {
