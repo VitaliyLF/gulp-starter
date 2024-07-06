@@ -134,7 +134,7 @@
 }
 
 .overlay {
-  @include tablet {
+  @include lg {
     opacity: 0;
     visibility: hidden;
     transition:

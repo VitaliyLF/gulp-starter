@@ -122,34 +122,38 @@ In the final folder **app/css**, two files are generated:
 
 Webpack is used to build the JS code.
 
-JS code is better divided into components - small js-files that contain their own, isolated from each other implementation. Place such files in the **components** folder, and then import them into the **\_components.js** file
+JavaScript code is better organized when divided into components — small JS files that contain their own isolated implementations. Place these files in the **components** folder, and then import them into the **\_components.js** file.
 
-The **main.js** file is the main file where all the others are connected.
+The **main.js** file is the primary file where all the others are included.
 
 ## 📁 Working with fonts
 
-The build implements support for **woff2** format only
+The build supports only the **woff2** format.
 
-Load the **woff2** files into the **assets/fonts** folder, and then call the `@font-face` mixin in the **\_fonts.scss** file.
+Place the  **woff2**  files in the  **assets/fonts** folder, and then call the @font-face mixin in the **\_fonts.scss** file.
 
-Also, don't forget to put the same fonts in `<link preload>` in the html.
+Also, don't forget to include the same fonts in `<link preload>` in the HTML.
 
 ## 📁 Working with images
 
-Put any images other than **favicon** in the **img** folder.
+Place any images other than the **favicon** in the**img** folder.
 
-If you need to make an svg sprite, put the svg files needed for the sprite in the **img/svg** folder. At the same time, attributes like fill, stroke, style will be automatically removed. Other svg files just leave them in the **img** folder.
+If you need to create an SVG sprite, put the SVG files needed for the sprite in the **img/svg** folder. Attributes like fill, stroke, and style will be automatically removed. For other SVG files, just leave them in the **img** folder.
 
-If you use the `gulp build` command, you will get minified images in the final **img** folder.
+If you use the `gulp build` command, you will get minified images in the final **img* folder.
 
 ## 📁 Working with other assets
 
-Any project assets that do not have a corresponding folder should be stored in the **resources** folder. These can be video files, php files (such as form submission file), favicon and others.
+Any project assets that do not have a corresponding folder should be stored in the **resources** folder. These can include video files, favicon, and others.
 
 ## 📁 Typographer
 
-For the correct display of text on the page was connected plugin typographer, which will automatically add unbroken spaces and other characters, so that the text everywhere displayed according to all the rules of the language.
+A typographer plugin has been connected to ensure the correct display of text on the page. This plugin will **automatically** add non-breaking spaces and other characters, ensuring the text is displayed according to all language rules.
 
 ## 📁 Seo optimization
 
-The main index.html lists a brief excerpt and descriptions of each meta tag
+The main **index.html** file contains a brief excerpt and descriptions of each meta tag.
+
+## ⭐ Thank you
+
+Thank you for using this build. If you find it helpful, please give it a **star** on GitHub and follow the repository for updates. Your support is greatly appreciated!
