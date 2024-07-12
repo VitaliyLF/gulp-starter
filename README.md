@@ -57,6 +57,8 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 ## 📝 Folder and file structure
 
 ```
+├── 📁.vscode/                                  
+    ├──📃extensions.json                        # Recommended extensions
 ├── 📁gulp/                                     # All Gulp build settings, divided into separate files
 ├── 📁src/                                      # Sources
 │   ├──📁js/                                    # Scripts
