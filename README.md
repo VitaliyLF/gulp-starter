@@ -1,3 +1,7 @@
+<div align="center">
+<p><img src="https://tpverstak.ru/wp-content/uploads/2018/09/7fb34ea5d33344da61d80-2.jpg" alt="Gulp Logo"></p>
+</div>
+
 ## 📦 Getting started <a href="https://github.com/VitaliyLF/gulp-starter/stargazers"><img src="https://img.shields.io/github/stars/VitaliyLF/gulp-starter" alt="Stars Badge"/></a>
 
 To work with this build, clone the entire contents of the repository using:<br>
@@ -53,6 +57,8 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 ## 📝 Folder and file structure
 
 ```
+├── 📁.vscode/                                  
+    ├──📃extensions.json                        # Recommended extensions
 ├── 📁gulp/                                     # All Gulp build settings, divided into separate files
 ├── 📁src/                                      # Sources
 │   ├──📁js/                                    # Scripts
