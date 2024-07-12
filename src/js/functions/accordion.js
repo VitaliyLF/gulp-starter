@@ -3,7 +3,7 @@ class Accordion {
     let defaultOptions = {
       isOpen: () => {},
       isClose: () => {},
-      speed: 300
+      speed: 300,
     }
 
     this.options = Object.assign(defaultOptions, options)
@@ -36,7 +36,10 @@ class Accordion {
   }
 
   open() {
-    this.accordion.style.setProperty('--accordion-time', `${this.options.speed / 1000}s`)
+    this.accordion.style.setProperty(
+      '--accordion-time',
+      `${this.options.speed / 1000}s`,
+    )
     this.accordion.classList.add('is-open')
     this.control.setAttribute('aria-expanded', true)
     this.content.setAttribute('aria-hidden', false)
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   accordions.forEach((accordion) => {
     new Accordion(accordion, {
-      speed: 400
+      speed: 400,
     })
   })
 })

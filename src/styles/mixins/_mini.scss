@@ -1,19 +1,15 @@
-@mixin image-set($pathToImage, $backgroundPosition, $backgroundSize, $backgroundRepeat) {
+@mixin image-set(
+  $pathToImage,
+  $backgroundPosition,
+  $backgroundSize,
+  $backgroundRepeat
+) {
   background-image: url('#{$pathToImage}.jpg');
   background-position: $backgroundPosition;
   background-size: $backgroundSize;
   background-repeat: $backgroundRepeat;
-  background-image: image-set('#{$pathToImage}.webp' type('image/webp'), '#{$pathToImage}.jpg' type('image/jpg'));
-}
-
-@mixin marginRight($value) {
-  &:not(:last-child) {
-    margin-right: $value;
-  }
-}
-
-@mixin marginBottom($value) {
-  &:not(:last-child) {
-    margin-bottom: $value;
-  }
+  background-image: image-set(
+    '#{$pathToImage}.webp' type('image/webp'),
+    '#{$pathToImage}.jpg' type('image/jpg')
+  );
 }

@@ -61,9 +61,6 @@
 }
 
 .container {
-  --content-max-width: 1200px;
-  --padding-inline: 15px;
-
   margin-inline: auto;
   width: min(var(--content-max-width), 100% - (var(--padding-inline) * 2));
 }
