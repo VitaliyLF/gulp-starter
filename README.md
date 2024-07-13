@@ -54,7 +54,7 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 
 `By following these steps, you'll be set up to work with the project efficiently.`
 
-## 📝 Folder and file structure
+## 📁 Folder and file structure
 
 ```
 ├── 📁.vscode/                                  
@@ -98,7 +98,7 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 └── 📃 README.md                                # README build
 ```
 
-## 📁 Working with html
+## 🔖 Working with HTML
 
 Using **gulp-file-include**, you can divide an HTML file into various templates, which should be stored in the **components** folder.
 
@@ -111,7 +111,7 @@ Using **gulp-file-include**, you can divide an HTML file into various templates,
 
 When you run the `gulp build` command, all HTML files will be minified into a single line of code.
 
-## 📁 Working with CSS
+## 💎 Working with CSS
 
 The **SASS** preprocessor using **SCSS** syntax is employed during the build process.
 
@@ -124,7 +124,7 @@ In the final folder **app/css**, two files are generated:
 - **main.css** - for page styles,
 - **vendor.css** - for the styles of all libraries used in the project.
 
-## 📁 Working with JavaScript
+## 📝 Working with JavaScript
 
 Webpack is used to build the JS code.
 
@@ -132,7 +132,7 @@ JavaScript code is better organized when divided into components — small JS fi
 
 The **main.js** file is the primary file where all the others are included.
 
-## 📁 Working with fonts
+## ✒️ Working with fonts
 
 The build supports only the **woff2** format.
 
@@ -140,7 +140,7 @@ Place the  **woff2**  files in the  **assets/fonts** folder, and then call the @
 
 Also, don't forget to include the same fonts in `<link preload>` in the HTML.
 
-## 📁 Working with images
+## 🎨 Working with images
 
 Place any images other than the **favicon** in the**img** folder.
 
@@ -148,15 +148,15 @@ If you need to create an SVG sprite, put the SVG files needed for the sprite in 
 
 If you use the `gulp build` command, you will get minified images in the final **img* folder.
 
-## 📁 Working with other assets
+## 📜 Working with other assets
 
 Any project assets that do not have a corresponding folder should be stored in the **resources** folder. These can include video files, favicon, and others.
 
-## 📁 Typographer
+## ⌨️ Typographer
 
 A typographer plugin has been connected to ensure the correct display of text on the page. This plugin will **automatically** add non-breaking spaces and other characters, ensuring the text is displayed according to all language rules.
 
-## 📁 Seo optimization
+## ✅ Seo optimization
 
 The main **index.html** file contains a brief excerpt and descriptions of each meta tag.
 
