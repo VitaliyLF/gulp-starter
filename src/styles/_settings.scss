@@ -39,13 +39,12 @@
   overscroll-behavior: none;
 }
 
-.custom-scrollbar {
-  &::-webkit-scrollbar-track {
-    background-color: var(--color-light, #ffffff);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--color-green, #02836f);
+@supports (
+  scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff)
+) {
+  .custom-scrollbar {
+    scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff);
+    scrollbar-width: auto;
   }
 }
 
@@ -85,9 +84,9 @@
   position: fixed;
   inset: 0;
   opacity: 0;
-  font-family: var(--font-family-additional);
+  font-family: var(--font-family-base);
   font-size: var(--skiplink-offset);
-  font-weight: 700;
+  font-weight: 400;
   background-color: var(--skiplink-overlay-color-mix-a60, hsla(0, 0%, 0%, 0.6));
   color: var(--color-dark);
   z-index: var(--skiplink-z-index);
@@ -123,7 +122,6 @@
 
     &::after {
       content: attr(data-title);
-      font-size: initial;
       order: 3;
       padding-top: 2px;
       margin-left: 2px;

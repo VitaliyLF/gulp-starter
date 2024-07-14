@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="page">
+<html lang="en" class="page custom-scrollbar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,9 +50,7 @@
   </head>
 
   <body class="page__body">
-    <a class="skiplink" href="#main">
-      <span class="skiplink__text" data-title="Enter">Skip to Content</span>
-    </a>
+    @include('../components/skiplink.html')
     <div class="site-container">
       @include('../components/header.html')
       <main class="page__main" id="main">
