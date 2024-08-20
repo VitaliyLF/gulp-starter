@@ -142,7 +142,7 @@ Also, don't forget to include the same fonts in `<link preload>` in the HTML.
 
 ## 🎨 Working with images
 
-Place any images other than the **favicon** in the**img** folder.
+Place any images other than the **favicon** in the **img** folder.
 
 If you need to create an SVG sprite, put the SVG files needed for the sprite in the **img/svg** folder. Attributes like fill, stroke, and style will be automatically removed. For other SVG files, just leave them in the **img** folder.
 
