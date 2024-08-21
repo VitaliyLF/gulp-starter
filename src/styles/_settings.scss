@@ -39,9 +39,7 @@
   overscroll-behavior: none;
 }
 
-@supports (
-  scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff)
-) {
+@supports (scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff)) {
   .custom-scrollbar {
     scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff);
     scrollbar-width: auto;
@@ -69,16 +67,8 @@
   --skiplink-bg-color: var(--color-green, #02836f);
   --skiplink-overlay-color: hsl(0, 0%, 0%);
   --skiplink-flashing-color: hsl(0, 0%, 100%);
-  --skiplink-overlay-color-mix-a60: color-mix(
-    in srgb,
-    var(--skiplink-overlay-color),
-    transparent 40%
-  );
-  --skiplink-flashing-color-mix-a50: color-mix(
-    in srgb,
-    var(--skiplink-flashing-color),
-    transparent 50%
-  );
+  --skiplink-overlay-color-mix-a60: color-mix(in srgb, var(--skiplink-overlay-color), transparent 40%);
+  --skiplink-flashing-color-mix-a50: color-mix(in srgb, var(--skiplink-flashing-color), transparent 50%);
   --skiplink-z-index: 900;
 
   position: fixed;
@@ -91,7 +81,8 @@
   color: var(--color-dark);
   z-index: var(--skiplink-z-index);
   pointer-events: none;
-  transition: opacity var(--timing, 0.3s) ease,
+  transition:
+    opacity var(--timing, 0.3s) ease,
     background-color var(--timing, 0.3s) ease;
 
   &__text {
@@ -108,8 +99,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal
-      none running;
+    animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running;
     transition: box-shadow var(--timing, 0.3s);
 
     &::before {
@@ -132,8 +122,7 @@
     opacity: 1;
 
     & .skiplink__text {
-      box-shadow: var(--skiplink-flashing-color-mix-a50, hsla(0, 0%, 100%, 0.5))
-        0px 0px 0px 0px;
+      box-shadow: var(--skiplink-flashing-color-mix-a50, hsla(0, 0%, 100%, 0.5)) 0px 0px 0px 0px;
     }
   }
 }
@@ -142,7 +131,9 @@
   @include lg {
     opacity: 0;
     visibility: hidden;
-    transition: opacity var(--timing) ease, visibility var(--timing) ease;
+    transition:
+      opacity var(--timing) ease,
+      visibility var(--timing) ease;
     z-index: 1;
 
     &--active {
@@ -163,10 +154,71 @@
   text-stroke: 1px var(--color-dark);
 }
 
+.text-line-clamp {
+  --font-size: 14px;
+  --line-height-multiplier: 1.29;
+  --lines: 3;
+
+  font-size: var(--font-size);
+  line-height: var(--line-height-multiplier);
+  display: -webkit-box;
+  -webkit-line-clamp: var(--lines);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: calc(1em * var(--line-height-multiplier) * var(--lines));
+}
+
 .text-bg-gradient {
   background: linear-gradient(90deg, rgb(158, 63, 58) 36%, rgb(52, 17, 142));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+// The simple trick to transition from height 0 to auto with CSS
+.accordion {
+  border-radius: 20px;
+  background-color: teal;
+  color: white;
+  padding: 20px;
+
+  @include hover {
+    .accordion__inner {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  .is-opened {
+    .accordion__inner {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-in-out;
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__padding-top {
+    padding-top: 20px;
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    color: black;
+  }
 }
 
 @media (prefers-reduced-motion) {
