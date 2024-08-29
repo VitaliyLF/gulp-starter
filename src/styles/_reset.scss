@@ -85,8 +85,17 @@ input {
     display: none;
   }
 
-  &[type='number'] {
+  &[type="number"] {
     -moz-appearance: textfield;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    background-color: transparent !important;
+    transition:
+      background-color 10000000s 10000000s,
+      box-shadow 10000000s 10000000s;
   }
 }
 
