@@ -1,0 +1,52 @@
+.ui-kit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  // The simple trick to transition from height 0 to auto with CSS
+  .accordion {
+    border-radius: 20px;
+    background-color: teal;
+    color: white;
+    padding: 20px;
+
+    @include hover {
+      .accordion__inner {
+        grid-template-rows: 1fr;
+      }
+    }
+
+    .is-opened {
+      .accordion__inner {
+        grid-template-rows: 1fr;
+      }
+    }
+
+    &__inner {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease-in-out;
+    }
+
+    &__content {
+      overflow: hidden;
+    }
+
+    &__padding-top {
+      padding-top: 20px;
+    }
+
+    &__text {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__button {
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #fff;
+      color: black;
+    }
+  }
+}

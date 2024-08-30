@@ -1,6 +1,7 @@
-// * * * * * {
+// debug offset
+// *  {
 //   outline: 3px solid orange;
-// }    /* debug offsets */
+// }
 
 .page {
   height: 100%;
@@ -18,9 +19,9 @@
 
 .page__body {
   margin: 0;
-  min-width: 360px;
   min-height: 100%;
   font-size: 16px;
+  line-height: 1.5;
 
   &:has(dialog[open]) {
     overflow: hidden;
@@ -36,7 +37,6 @@
 
 .scroll-lock {
   overflow: hidden;
-  overscroll-behavior: none;
 }
 
 @supports (scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff)) {
@@ -148,6 +148,16 @@
   }
 }
 
+// https://github.com/stefanjudis/css-scroll-shadows
+.scrollbox-shadow {
+  --gradient: radial-gradient(100% 6px at 50% 50%, #0002, #0000);
+
+  background:
+    linear-gradient(#fff 10px, #0000 40px calc(100% - 40px), #fff calc(100% - 10px)) local,
+    var(--gradient) top / 100% 200%,
+    var(--gradient) bottom/ 100% 200%;
+}
+
 .text-stroke {
   color: transparent;
   -webkit-text-stroke: 1px var(--color-dark);
@@ -172,53 +182,6 @@
   background: linear-gradient(90deg, rgb(158, 63, 58) 36%, rgb(52, 17, 142));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-// The simple trick to transition from height 0 to auto with CSS
-.accordion {
-  border-radius: 20px;
-  background-color: teal;
-  color: white;
-  padding: 20px;
-
-  @include hover {
-    .accordion__inner {
-      grid-template-rows: 1fr;
-    }
-  }
-
-  .is-opened {
-    .accordion__inner {
-      grid-template-rows: 1fr;
-    }
-  }
-
-  &__inner {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-in-out;
-  }
-
-  &__content {
-    overflow: hidden;
-  }
-
-  &__padding-top {
-    padding-top: 20px;
-  }
-
-  &__text {
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
-  }
-
-  &__button {
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #fff;
-    color: black;
-  }
 }
 
 @media (prefers-reduced-motion) {
