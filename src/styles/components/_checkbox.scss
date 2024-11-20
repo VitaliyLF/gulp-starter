@@ -1,0 +1,32 @@
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+
+  &__input {
+    // hidden input with appearance
+    appearance: none;
+    width: 16px;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    background-color: #ffffff;
+    position: relative;
+    border: 1px solid #ccc;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: green;
+      mask: url('../img/select-check-icon.svg') center / 100%;
+      scale: 0;
+      transition: scale 0.3s ease-in-out, mask 0.3s ease-in-out;
+    }
+
+    &:checked::before {
+      mask: url('../img/select-check-icon.svg') no-repeat center / 100%;
+      scale: 1;
+    }
+  }
+}
