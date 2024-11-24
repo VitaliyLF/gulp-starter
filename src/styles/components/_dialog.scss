@@ -1,0 +1,62 @@
+.dialog {
+  background-color: transparent;
+  position: fixed;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  max-width: 500px;
+  width: 100%;
+  visibility: hidden;
+  transform: scale(0.6);
+  // transition: opacity 0.3s ease, visibility 0.3s ease,
+  //   background-color 0.3s ease, transform 0.3s ease;
+
+  transition: all 0.3s allow-discrete ease;
+
+  &::backdrop {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: opacity 0.3s allow-discrete ease,
+      background-color 0.3s allow-discrete ease;
+  }
+
+  &[open] {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+
+    &::backdrop {
+      opacity: 0.5;
+
+      @starting-style {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}

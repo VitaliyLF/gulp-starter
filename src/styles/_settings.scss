@@ -39,12 +39,12 @@
   overflow: hidden;
 }
 
-@supports (scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff)) {
-  .custom-scrollbar {
-    scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff);
-    scrollbar-width: auto;
-  }
-}
+// @supports (scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff)) {
+//   .custom-scrollbar {
+//     scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff);
+//     scrollbar-width: auto;
+//   }
+// }
 
 .visually-hidden {
   position: absolute;
@@ -67,8 +67,16 @@
   --skiplink-bg-color: var(--color-green, #02836f);
   --skiplink-overlay-color: hsl(0, 0%, 0%);
   --skiplink-flashing-color: hsl(0, 0%, 100%);
-  --skiplink-overlay-color-mix-a60: color-mix(in srgb, var(--skiplink-overlay-color), transparent 40%);
-  --skiplink-flashing-color-mix-a50: color-mix(in srgb, var(--skiplink-flashing-color), transparent 50%);
+  --skiplink-overlay-color-mix-a60: color-mix(
+    in srgb,
+    var(--skiplink-overlay-color),
+    transparent 40%
+  );
+  --skiplink-flashing-color-mix-a50: color-mix(
+    in srgb,
+    var(--skiplink-flashing-color),
+    transparent 50%
+  );
   --skiplink-z-index: 900;
 
   position: fixed;
@@ -81,8 +89,7 @@
   color: var(--color-dark);
   z-index: var(--skiplink-z-index);
   pointer-events: none;
-  transition:
-    opacity var(--timing, 0.3s) ease,
+  transition: opacity var(--timing, 0.3s) ease,
     background-color var(--timing, 0.3s) ease;
 
   &__text {
@@ -99,7 +106,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running;
+    animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal
+      none running;
     transition: box-shadow var(--timing, 0.3s);
 
     &::before {
@@ -122,7 +130,8 @@
     opacity: 1;
 
     & .skiplink__text {
-      box-shadow: var(--skiplink-flashing-color-mix-a50, hsla(0, 0%, 100%, 0.5)) 0px 0px 0px 0px;
+      box-shadow: var(--skiplink-flashing-color-mix-a50, hsla(0, 0%, 100%, 0.5))
+        0px 0px 0px 0px;
     }
   }
 }
@@ -131,9 +140,7 @@
   @include lg {
     opacity: 0;
     visibility: hidden;
-    transition:
-      opacity var(--timing) ease,
-      visibility var(--timing) ease;
+    transition: opacity var(--timing) ease, visibility var(--timing) ease;
     z-index: 1;
 
     &--active {
@@ -152,10 +159,13 @@
 .scrollbox-shadow {
   --gradient: radial-gradient(100% 6px at 50% 50%, #0002, #0000);
 
-  background:
-    linear-gradient(#fff 10px, #0000 40px calc(100% - 40px), #fff calc(100% - 10px)) local,
-    var(--gradient) top / 100% 200%,
-    var(--gradient) bottom/ 100% 200%;
+  background: linear-gradient(
+        #fff 10px,
+        #0000 40px calc(100% - 40px),
+        #fff calc(100% - 10px)
+      )
+      local,
+    var(--gradient) top / 100% 200%, var(--gradient) bottom/ 100% 200%;
 }
 
 .text-stroke {
