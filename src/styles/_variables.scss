@@ -1,0 +1,25 @@
+@use 'helpers' as *;
+
+:root {
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-accent: 'Kumbh Sans', sans-serif;
+
+  --color-light: hsl(0, 0%, 100%);
+  --color-dark: hsl(0, 0%, 0%);
+  --color-green: hsl(171, 97%, 26%);
+  --color-mint: hsl(157, 29%, 85%);
+
+  --container-width: #{rem(1600)};
+  --container-padding-x: #{rem(16)};
+
+  --border: #{rem(1)} solid var(--color-dark-15);
+
+  --shadow: 0 0 0 #{rem(3)} #191919;
+
+  --transition-duration: 0.2s;
+
+  --preloader-z-index: 1001;
+  --header-nav-z-index: 10;
+
+  --overlay-shadow: rgba(0, 0, 0, 0.6);
+}

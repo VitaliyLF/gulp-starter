@@ -1,3 +1,5 @@
+@use '../helpers' as *;
+
 .custom-checkbox {
   display: inline-flex;
   align-items: center;
@@ -19,13 +21,15 @@
       position: absolute;
       inset: 0;
       background-color: green;
-      mask: url('../img/select-check-icon.svg') center / 100%;
+      mask: url('/img/select-check-icon.svg') center / 100%;
       scale: 0;
-      transition: scale 0.3s ease-in-out, mask 0.3s ease-in-out;
+      transition:
+        scale 0.3s ease-in-out,
+        mask 0.3s ease-in-out;
     }
 
     &:checked::before {
-      mask: url('../img/select-check-icon.svg') no-repeat center / 100%;
+      mask: url('/img/select-check-icon.svg') no-repeat center / 100%;
       scale: 1;
     }
   }

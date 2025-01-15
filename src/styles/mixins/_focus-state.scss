@@ -1,6 +1,0 @@
-@mixin focus-visible {
-  &:focus-visible {
-    outline: var(--outline-offset) solid var(--color-dark);
-    outline-offset: calc(var(--outline-offset) * 2);
-  }
-}

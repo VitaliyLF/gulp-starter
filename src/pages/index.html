@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="page custom-scrollbar">
   <head>
     <meta charset="UTF-8" />
@@ -40,7 +40,13 @@
     <!-- must match the original link that you specify in the url  -->
     <link
       rel="preload"
-      href="fonts/GilroyRegular.woff2"
+      href="fonts/Inter-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      href="fonts/KumbhSans-Regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin />
@@ -50,22 +56,16 @@
   </head>
 
   <body class="page__body">
-    @include('../components/skiplink.html')
+    @include('../blocks/skiplink.html')
     <div class="site-container">
-      @include('../components/header.html')
+      @include('../blocks/header.html')
       <main class="page__main" id="main">
         <div class="container">
-          @include('../components/accordion.html')
-          @include('../components/accordion.html')
-          @include('../components/accordion.html')
-          @include('../components/accordion.html')
-          @include('../components/accordion.html')
-          @include('../components/accordion.html')
-          @include('../components/checkbox.html')
-          @include('../components/dialog.html')
+          @include('../blocks/accordion.html')
+          @include('../blocks/checkbox.html') @include('../blocks/dialog.html')
         </div>
       </main>
-      @include('../components/footer.html')
+      @include('../blocks/footer.html')
     </div>
   </body>
 </html>

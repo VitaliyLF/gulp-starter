@@ -1,3 +1,5 @@
+@use '../helpers' as *;
+
 .accordion {
   border: 1px solid black;
   padding: 20px;
@@ -25,7 +27,9 @@
   &__content {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-in-out, padding 0.3s ease-in-out;
+    transition:
+      grid-template-rows 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
   }
 
   &__inner {

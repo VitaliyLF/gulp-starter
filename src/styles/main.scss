@@ -1,18 +1,12 @@
-@import 'normalize';
-@import 'reset';
-@import 'base-variables';
-@import 'colors-variables';
-@import 'offset-system-variables';
-@import 'mixins';
-@import 'fonts';
-@import 'settings';
-@import 'unitary-classes';
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
 
-// page components connection
-@import './components/button';
-@import './components/accordion';
-@import './components/checkbox';
-@import './components/dialog';
-
-// page blocks connection
-@import './components/header';
+// Main page
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/accordions';
+@use 'blocks/checkbox';
+@use 'blocks/dialog';

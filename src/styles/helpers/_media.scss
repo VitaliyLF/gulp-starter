@@ -1,0 +1,30 @@
+@use './functions' as *;
+
+$laptop: 1440.98;
+$tablet: 1023.98;
+$mobile: 767.98;
+$mobile-s: 480.98;
+
+@mixin laptop {
+  @media (max-width: rem($laptop)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: rem($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  @media (max-width: rem($mobile-s)) {
+    @content;
+  }
+}

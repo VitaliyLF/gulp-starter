@@ -1,70 +1,40 @@
-// debug offset
-// *  {
-//   outline: 3px solid orange;
-// }
+@use 'helpers' as *;
 
-.page {
-  height: 100%;
-  font-family: var(--font-family-base);
-  background-color: var(--color-light);
-  font-synthesis: none;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  hyphens: auto;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
-  scrollbar-gutter: stable;
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
 }
 
-.page__body {
-  margin: 0;
-  min-height: 100%;
-  font-size: 16px;
-  line-height: 1.5;
-
-  &:has(dialog[open]) {
-    overflow: hidden;
-  }
+.visually-hidden {
+  @include visually-hidden;
 }
 
-.site-container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
-.scroll-lock {
-  overflow: hidden;
-}
-
-// @supports (scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff)) {
+// @supports (scrollbar-color: var(--color-accent) var(--color-dark)) {
 //   .custom-scrollbar {
-//     scrollbar-color: var(--color-green, #02836f) var(--color-mint, #ffffff);
+//     scrollbar-color: var(--color-accent) var(--color-dark);
 //     scrollbar-width: auto;
 //   }
 // }
 
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-}
+// https://github.com/stefanjudis/css-scroll-shadows
+.scrollbox-shadow {
+  --gradient: radial-gradient(100% 6px at 50% 50%, #0002, #0000);
 
-.container {
-  margin-inline: auto;
-  width: min(var(--content-max-width), 100% - (var(--padding-inline) * 2));
+  background:
+    linear-gradient(
+        #fff 10px,
+        #0000 40px calc(100% - 40px),
+        #fff calc(100% - 10px)
+      )
+      local,
+    var(--gradient) top / 100% 200%,
+    var(--gradient) bottom/ 100% 200%;
 }
 
 .skiplink {
-  --skiplink-offset: 20px;
-  --skiplink-bg-color: var(--color-green, #02836f);
+  --skiplink-offset: 1.25rem;
+  --skiplink-bg-color: var(--color-green);
   --skiplink-overlay-color: hsl(0, 0%, 0%);
   --skiplink-flashing-color: hsl(0, 0%, 100%);
   --skiplink-overlay-color-mix-a60: color-mix(
@@ -85,24 +55,24 @@
   font-family: var(--font-family-base);
   font-size: var(--skiplink-offset);
   font-weight: 400;
-  background-color: var(--skiplink-overlay-color-mix-a60, hsla(0, 0%, 0%, 0.6));
+  background-color: var(--skiplink-overlay-color-mix-a60);
   color: var(--color-dark);
   z-index: var(--skiplink-z-index);
   pointer-events: none;
-  transition: opacity var(--timing, 0.3s) ease,
+  transition:
+    opacity var(--timing, 0.3s) ease,
     background-color var(--timing, 0.3s) ease;
 
   &__text {
-    @include pulse-btn-bg;
-
     position: relative;
     top: calc(var(--skiplink-offset) * 2);
     left: var(--skiplink-offset);
     padding: var(--skiplink-offset);
     border-radius: var(--skiplink-offset);
     background-color: var(--skiplink-bg-color);
-    color: var(--color-light, #fff);
-    border: 2px solid var(--color-light, #fff);
+    color: var(--color-light);
+    height: calc(var(--skiplink-offset) * 4);
+    border: 2px solid var(--color-light);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -111,7 +81,7 @@
     transition: box-shadow var(--timing, 0.3s);
 
     &::before {
-      content: url(../img/skiplink-enter-icon.svg);
+      content: url('/img/skiplink-enter-icon.svg');
       margin-left: var(--skiplink-offset);
       order: 2;
       width: var(--skiplink-offset);
@@ -124,23 +94,30 @@
       padding-top: 2px;
       margin-left: 2px;
     }
+
+    @keyframes pulse-btn-bg {
+      100% {
+        box-shadow: 0 0 0 20px rgba(193, 244, 246, 0);
+      }
+    }
   }
 
   &:focus {
     opacity: 1;
 
     & .skiplink__text {
-      box-shadow: var(--skiplink-flashing-color-mix-a50, hsla(0, 0%, 100%, 0.5))
-        0px 0px 0px 0px;
+      box-shadow: var(--skiplink-flashing-color-mix-a50) 0px 0px 0px 0px;
     }
   }
 }
 
 .overlay {
-  @include lg {
+  @include tablet {
     opacity: 0;
     visibility: hidden;
-    transition: opacity var(--timing) ease, visibility var(--timing) ease;
+    transition:
+      opacity var(--timing) ease,
+      visibility var(--timing) ease;
     z-index: 1;
 
     &--active {
@@ -153,19 +130,6 @@
       visibility: visible;
     }
   }
-}
-
-// https://github.com/stefanjudis/css-scroll-shadows
-.scrollbox-shadow {
-  --gradient: radial-gradient(100% 6px at 50% 50%, #0002, #0000);
-
-  background: linear-gradient(
-        #fff 10px,
-        #0000 40px calc(100% - 40px),
-        #fff calc(100% - 10px)
-      )
-      local,
-    var(--gradient) top / 100% 200%, var(--gradient) bottom/ 100% 200%;
 }
 
 .text-stroke {
@@ -192,25 +156,4 @@
   background: linear-gradient(90deg, rgb(158, 63, 58) 36%, rgb(52, 17, 142));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-@media (prefers-reduced-motion) {
-  * {
-    &,
-    &::after,
-    &::before {
-      animation: none !important;
-      transition: 0.01s !important;
-      scroll-behavior: auto !important;
-    }
-  }
-}
-
-@media (prefers-contrast: more) {
-  .backdrop-title {
-    &::after {
-      -webkit-text-stroke: 10px var(--color-dark);
-      text-stroke: 10px var(--color-dark);
-    }
-  }
 }
