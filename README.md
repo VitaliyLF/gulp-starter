@@ -69,7 +69,6 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 │   ├── 📁styles/                               # Main styles folder
 │   │   └──📁blocks/                            # folder scss components
 │   │   └──📃 components-name.scss              # scss component
-│   │   ├──📁mixins/                            # folder for saving finished mixins components
 │   │   └──📁helpers/                           # folder scss components
 │   │   └──📃 _functions.scss                   # contains utility functions used throughout the project.
 │   │   └──📃 _index.scss                       # imports all the other files in this folder, serving as an entry point.
