@@ -67,26 +67,28 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 │   │   ├──📃 _components.js                    # component connection file
 │   │   └──📃 main.js                           # Main script
 │   ├── 📁styles/                               # Main styles folder
-│   │   └──📁components/                        # scss components
-│   │   ├──📁mixins/                            # folder for saving finished mixins components
-│   │   ├──📁vendor/                            # folder for storing local css styles of libraries
-│   │   ├──📃 _base-variables.scss              # File with global variables
-│   │   ├──📃 _colors-variables.scss            # File with color variables
-│   │   ├──📃 _fonts.scss                       # File for connecting fonts (you can use myxin)
-│   │   ├──📃 _mixins.scss                      # File for connecting mixins from the mixins folder
-│   │   ├──📃 _offset-system-variables.scss     # File with offset system variables
-│   │   ├──📃 _reset.scss                       # File with global tag reset
-│   │   ├──📃 _settings.scss                    # File for writing global styles
-│   │   ├──📃 _unitary-classes.scss             # File with unitary classes that are reused throughout the project
-│   │   ├──📃 main.scss                         # Main style file
+│   │   └──📁blocks/                            # folder scss components
+│   │   └──📃 components-name.scss              # scss component
+│   │   └──📁helpers/                           # folder scss components
+│   │   └──📃 _functions.scss                   # contains utility functions used throughout the project.
+│   │   └──📃 _index.scss                       # imports all the other files in this folder, serving as an entry point.
+│   │   └──📃 _media.scss                       # includes media queries for responsive design.
+│   │   └──📃 _mixins.scss                      # stores project-specific mixins for reusable styles.
+│   │   ├──📃 _fonts.scss                       # File for connecting fonts
+│   │   ├──📃 _globals.scss                     # Сontains reusable global classes for consistent styling across the project.
+│   │   ├──📃 _normalize.scss                   # File with global tag reset
+│   │   ├──📃 _utils.scss                       # Сontains utility classes and helper styles for quick and reusable styling.
+│   │   ├──📃 _variables.scss                   # Global variables
+│   │   ├──📃 main.scss                         # Imports all style blocks, serving as the central stylesheet for the project.
 │   │   └──📃 vendor.scss                       # File for connecting library styles from the vendor folder
-│   ├──📁 components/                           # folder for storing html partials of the page
+│   ├──📁 blocks/                               # folder for storing html partials of the page
 │   │   └──📃components-name.html               # particle html component
 │   ├── 📁pages/                                # folder for storing html pages of the project
 │   │   └──📃page-name.html                     # html pages
 │   ├── 📁img/                                  # folder for storing img
 │   │   └──📁svg/                               # special folder for converting svg to sprite
 │   ├── 📁assets/                               # folder for storing other assets - php, video files, favicon, etc.
+│   │   └──📁 video/                            # folder for video files
 │   │   └──📁 fonts/                            # folder for storing fonts in woff2 format
 │   │   ├──📃 fonts.woff2                       # fonts only woff2
 │   │   ├──📃 favicon.ico                       # favicon
