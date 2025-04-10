@@ -20,29 +20,45 @@ import { zipFiles } from './gulp/tasks/zip.js'
 global.app = {
   gulp,
   isProd: process.argv.includes('--build'),
-  paths
+  paths,
 }
 
 const watcher = () => {
   browserSync.init({
     server: {
-      baseDir: `${app.paths.base.build}`
+      baseDir: `${app.paths.base.build}`,
     },
     notify: false,
-    port: 3000
+    port: 3000,
   })
 
   gulp.watch(app.paths.srcScss, styles)
   gulp.watch(app.paths.srcFullJs, scripts)
-  gulp.watch(`${app.paths.srcComponentsFolder}/*.html`, htmlInclude)
-  gulp.watch(`${app.paths.base.src}/pages/*.html`, htmlInclude)
+  gulp.watch(
+    [
+      `${app.paths.srcComponentsFolder}/*.html`,
+      `${app.paths.base.src}/pages/*.html`,
+      `${app.paths.base.src}/blocks/*.html`,
+    ],
+    htmlInclude,
+  )
   gulp.watch(`${app.paths.assetsFolder}/**`, resources)
   gulp.watch(`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images)
   gulp.watch(`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages)
   gulp.watch(app.paths.srcSvg, svgSprites)
 }
 
-const dev = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watcher)
+const dev = gulp.series(
+  clean,
+  htmlInclude,
+  scripts,
+  styles,
+  resources,
+  images,
+  webpImages,
+  svgSprites,
+  watcher,
+)
 const backend = gulp.series(
   clean,
   htmlInclude,
@@ -51,9 +67,19 @@ const backend = gulp.series(
   resources,
   images,
   webpImages,
-  svgSprites
+  svgSprites,
 )
-const build = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify)
+const build = gulp.series(
+  clean,
+  htmlInclude,
+  scripts,
+  styles,
+  resources,
+  images,
+  webpImages,
+  svgSprites,
+  htmlMinify,
+)
 const cache = gulp.series(cacheTask, rewrite)
 const zip = zipFiles
 
