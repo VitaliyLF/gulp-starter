@@ -9,12 +9,12 @@
   --color-green: hsl(171, 97%, 26%);
   --color-mint: hsl(157, 29%, 85%);
 
-  --container-width: #{rem(1600)};
-  --container-padding-x: #{rem(16)};
+  --container-width: 1600px;
+  --container-padding-x: 16px;
 
-  --border: #{rem(1)} solid var(--color-dark-15);
+  --border: 1px solid var(--color-dark-15);
 
-  --shadow: 0 0 0 #{rem(3)} #191919;
+  --shadow: 0 0 0 3px #191919;
 
   --transition-duration: 0.2s;
 

@@ -1,6 +1,7 @@
 @use 'helpers' as *;
 
 html {
+
   &.is-lock {
     overflow: hidden;
   }
@@ -11,8 +12,7 @@ html {
 }
 
 .page__body {
-  @include fluid-text(18, 14);
-
+  font-size: 16px;
   margin: 0;
   font-family: var(--font-family-base);
   color: var(--color-dark);
@@ -60,36 +60,28 @@ h6,
 
 h1,
 .h1 {
-  @include fluid-text(70, 30);
+  font-size: 87px;
 
   line-height: 1.2;
 }
 
 h2,
 .h2 {
-  @include fluid-text(58, 28);
+  font-size: 36px;
 
   line-height: 1.3;
 }
 
 h3,
 .h3 {
-  @include fluid-text(40, 24);
+  font-size: 24px;
+  line-height: 32px;
 }
 
 h4,
 .h4 {
-  @include fluid-text(26, 18);
-}
-
-h5,
-.h5 {
-  @include fluid-text(24, 18);
-}
-
-h6,
-.h6 {
-  @include fluid-text(20, 16);
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .site-container {
@@ -110,12 +102,13 @@ svg * {
 }
 
 a {
+
   @include hover {
-    color: var(--color-accent);
+    color: var(--color-green);
   }
 }
 
 :focus-visible {
-  outline: rem(2) dashed var(--color-light);
-  outline-offset: rem(4);
+  outline: 2px dashed var(--color-light);
+  outline-offset: 4px;
 }

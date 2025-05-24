@@ -1,9 +1,4 @@
 @use 'sass:math';
-@use 'functions' as *;
-
-@mixin fluid-text($max: 48, $min: 16) {
-  font-size: fluid($max, $min);
-}
 
 @mixin hide {
   opacity: 0;
@@ -48,14 +43,18 @@
 }
 
 @mixin hover($hasActiveEffectOnMobile: true) {
+
   @media (any-hover: hover) {
+
     &:hover {
       @content;
     }
   }
 
   @if ($hasActiveEffectOnMobile) {
+
     @media (any-hover: none) {
+
       &:active {
         @content;
       }

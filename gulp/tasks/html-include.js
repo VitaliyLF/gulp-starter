@@ -1,6 +1,5 @@
 import browserSync from 'browser-sync'
 import fileInclude from 'gulp-file-include'
-import typograf from 'gulp-typograf'
 
 export const htmlInclude = () => {
   return app.gulp
@@ -9,13 +8,8 @@ export const htmlInclude = () => {
       fileInclude({
         prefix: '@',
         basepath: '@file',
-        maxRecursion: 100
-      })
-    )
-    .pipe(
-      typograf({
-        locale: ['ru', 'en-US']
-      })
+        maxRecursion: 100,
+      }),
     )
     .pipe(app.gulp.dest(app.paths.base.build))
     .pipe(browserSync.stream())

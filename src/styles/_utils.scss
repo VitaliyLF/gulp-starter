@@ -7,6 +7,7 @@
 }
 
 .visually-hidden {
+
   @include visually-hidden;
 }
 
@@ -60,8 +61,8 @@
   z-index: var(--skiplink-z-index);
   pointer-events: none;
   transition:
-    opacity var(--timing, 0.3s) ease,
-    background-color var(--timing, 0.3s) ease;
+    opacity var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
 
   &__text {
     position: relative;
@@ -78,10 +79,10 @@
     justify-content: center;
     animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal
       none running;
-    transition: box-shadow var(--timing, 0.3s);
+    transition: box-shadow var(--transition-duration);
 
     &::before {
-      content: url('/img/skiplink-enter-icon.svg');
+      content: url(/img/skiplink-enter-icon.svg);
       margin-left: var(--skiplink-offset);
       order: 2;
       width: var(--skiplink-offset);
@@ -96,6 +97,7 @@
     }
 
     @keyframes pulse-btn-bg {
+
       100% {
         box-shadow: 0 0 0 20px rgba(193, 244, 246, 0);
       }
@@ -106,18 +108,19 @@
     opacity: 1;
 
     & .skiplink__text {
-      box-shadow: var(--skiplink-flashing-color-mix-a50) 0px 0px 0px 0px;
+      box-shadow: var(--skiplink-flashing-color-mix-a50) 0 0 0 0;
     }
   }
 }
 
 .overlay {
+
   @include tablet {
     opacity: 0;
     visibility: hidden;
     transition:
-      opacity var(--timing) ease,
-      visibility var(--timing) ease;
+      opacity var(--transition-duration) ease,
+      visibility var(--transition-duration) ease;
     z-index: 1;
 
     &--active {

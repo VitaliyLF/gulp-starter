@@ -1,30 +1,32 @@
-@use './functions' as *;
-
-$laptop: 1440.98;
-$tablet: 1023.98;
-$mobile: 767.98;
-$mobile-s: 480.98;
+$laptop: 1440.98px;
+$tablet: 1023.98px;
+$mobile: 767.98px;
+$mobile-s: 480.98px;
 
 @mixin laptop {
-  @media (max-width: rem($laptop)) {
+
+  @media (max-width: $laptop) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: rem($tablet)) {
+
+  @media (max-width: $tablet) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: rem($mobile)) {
+
+  @media (max-width: $mobile) {
     @content;
   }
 }
 
 @mixin mobile-s {
-  @media (max-width: rem($mobile-s)) {
+
+  @media (max-width: $mobile-s) {
     @content;
   }
 }

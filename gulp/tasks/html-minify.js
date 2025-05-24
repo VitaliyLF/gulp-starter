@@ -5,8 +5,8 @@ export const htmlMinify = () => {
     .src(`${app.paths.base.build}/**/*.html`)
     .pipe(
       htmlmin({
-        collapseWhitespace: true
-      })
+        collapseWhitespace: true,
+      }),
     )
     .pipe(app.gulp.dest(app.paths.base.build))
 }

@@ -16,25 +16,25 @@ export const styles = () => {
       plumber(
         notify.onError({
           title: 'SCSS',
-          message: 'Error: <%= error.message %>'
-        })
-      )
+          message: 'Error: <%= error.message %>',
+        }),
+      ),
     )
     .pipe(sass())
     .pipe(
       autoprefixer({
         cascade: false,
         grid: true,
-        overrideBrowserslist: ['last 5 versions']
-      })
+        overrideBrowserslist: ['last 2 versions'],
+      }),
     )
     .pipe(
       gulpif(
         app.isProd,
         cleanCSS({
-          level: 2
-        })
-      )
+          level: 2,
+        }),
+      ),
     )
     .pipe(app.gulp.dest(app.paths.buildCssFolder, { sourcemaps: '.' }))
     .pipe(browserSync.stream())

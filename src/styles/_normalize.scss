@@ -116,12 +116,13 @@ html {
     (e.g., to "stick" the footer to the bottom of the site)
    */
   height: 100%;
+
   /**
     Prevent horizontal interface jumps
     when the scrollbar appears or disappears
    */
   scrollbar-gutter: stable;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 /**
@@ -138,6 +139,7 @@ body {
     (e.g., to "stick" the footer to the bottom of the site)
    */
   min-height: 100%;
+
   /**
     Unified line height
    */
@@ -181,7 +183,7 @@ a {
   or starting with 'url')
  */
 :where([fill]:not([fill='none'], [fill^='url'])) {
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 /**
@@ -189,7 +191,7 @@ a {
   (excluding those with a 'stroke' attribute set to 'none')
  */
 :where([stroke]:not([stroke='none'], [stroke^='url'])) {
-  stroke: currentColor;
+  stroke: currentcolor;
 }
 
 /**
@@ -205,7 +207,7 @@ svg * {
  */
 :where(table) {
   border-collapse: collapse;
-  border-color: currentColor;
+  border-color: currentcolor;
 }
 
 /**
@@ -298,5 +300,5 @@ textarea {
 
 mark {
   background-color: transparent;
-  color: currentColor;
+  color: currentcolor;
 }

@@ -10,15 +10,15 @@ export const scripts = () => {
       plumber(
         notify.onError({
           title: 'JS',
-          message: 'Error: <%= error.message %>'
-        })
-      )
+          message: 'Error: <%= error.message %>',
+        }),
+      ),
     )
     .pipe(
       webpackStream({
         mode: app.isProd ? 'production' : 'development',
         output: {
-          filename: 'main.js'
+          filename: 'main.js',
         },
         module: {
           rules: [
@@ -32,17 +32,17 @@ export const scripts = () => {
                     [
                       '@babel/preset-env',
                       {
-                        targets: 'defaults'
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
+                        targets: 'defaults',
+                      },
+                    ],
+                  ],
+                },
+              },
+            },
+          ],
         },
-        devtool: !app.isProd ? 'source-map' : false
-      })
+        devtool: !app.isProd ? 'source-map' : false,
+      }),
     )
     .on('error', function (err) {
       console.error('WEBPACK ERROR', err)

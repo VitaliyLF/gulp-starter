@@ -14,9 +14,9 @@ export const zipFiles = () => {
       plumber(
         notify.onError({
           title: 'ZIP',
-          message: 'Error: <%= error.message %>'
-        })
-      )
+          message: 'Error: <%= error.message %>',
+        }),
+      ),
     )
     .pipe(zip(`${rootFolder}.zip`))
     .pipe(app.gulp.dest(app.paths.base.build))

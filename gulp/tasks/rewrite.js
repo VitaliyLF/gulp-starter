@@ -8,16 +8,16 @@ export const rewrite = () => {
     .src(`${app.paths.buildCssFolder}/*.css`)
     .pipe(
       revRewrite({
-        manifest
-      })
+        manifest,
+      }),
     )
     .pipe(app.gulp.dest(app.paths.buildCssFolder))
   return app.gulp
     .src(`${app.paths.base.build}/**/*.html`)
     .pipe(
       revRewrite({
-        manifest
-      })
+        manifest,
+      }),
     )
     .pipe(app.gulp.dest(app.paths.base.build))
 }
