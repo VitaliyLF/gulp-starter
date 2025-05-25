@@ -38,7 +38,7 @@ const watcher = () => {
     [
       `${app.paths.srcComponentsFolder}/*.html`,
       `${app.paths.base.src}/pages/*.html`,
-      `${app.paths.base.src}/blocks/*.html`,
+      `${app.paths.base.src}/components/**/*.html`,
     ],
     htmlInclude,
   )
