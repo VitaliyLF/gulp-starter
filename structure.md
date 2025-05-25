@@ -5,9 +5,25 @@
 |-- app
 |   |-- css
 |   |   |-- main.css
-|   |   |-- main.css.map
-|   |   |-- vendor.css
-|   |   - vendor.css.map
+|   |   - vendor.css
+|   |-- favicon.ico
+|   |-- fonts
+|   |   |-- Inter-Regular.woff2
+|   |   - KumbhSans-Regular.woff2
+|   |-- img
+|   |   |-- select-check-icon.svg
+|   |   |-- skiplink-enter-icon.svg
+|   |   |-- sprite.svg
+|   |   - svg
+|   |       |-- close-icon.svg
+|   |       |-- logo.svg
+|   |       - search.svg
+|   |-- index.html
+|   |-- js
+|   |   - main.js
+|   - video
+|       - example.mp4
+|-- build
 |   |-- favicon.ico
 |   |-- fonts
 |   |   |-- Inter-Regular.woff2
@@ -55,13 +71,19 @@
 |   |   |   - KumbhSans-Regular.woff2
 |   |   - video
 |   |       - example.mp4
-|   |-- blocks
-|   |   |-- accordion.html
-|   |   |-- checkbox.html
-|   |   |-- dialog.html
-|   |   |-- footer.html
-|   |   |-- header.html
-|   |   - skiplink.html
+|   |-- components
+|   |   |-- head
+|   |   |   - head.html
+|   |   |-- layout
+|   |   |   |-- footer.html
+|   |   |   - header.html
+|   |   |-- section
+|   |   |   - about.html
+|   |   - ui
+|   |       |-- accordion.html
+|   |       |-- checkbox.html
+|   |       |-- dialog.html
+|   |       - skiplink.html
 |   |-- img
 |   |   |-- select-check-icon.svg
 |   |   |-- skiplink-enter-icon.svg
@@ -93,19 +115,21 @@
 |       |-- _normalize.scss
 |       |-- _utils.scss
 |       |-- _variables.scss
-|       |-- blocks
-|       |   |-- _accordions.scss
-|       |   |-- _checkbox.scss
-|       |   |-- _dialog.scss
-|       |   |-- _footer.scss
-|       |   - _header.scss
+|       |-- components
+|       |   |-- layout
+|       |   |   |-- _footer.scss
+|       |   |   - _header.scss
+|       |   - ui
+|       |       |-- _accordions.scss
+|       |       |-- _checkbox.scss
+|       |       - _dialog.scss
 |       |-- helpers
-|       |   |-- _functions.scss
 |       |   |-- _index.scss
 |       |   |-- _media.scss
 |       |   - _mixins.scss
 |       |-- main.scss
 |       - vendor.scss
-- structure.md
+|-- structure.md
+- stylelint.config.js
 
-24 directories, 84 files
+36 directories, 96 files

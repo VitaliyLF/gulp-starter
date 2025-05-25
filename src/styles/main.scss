@@ -4,9 +4,14 @@
 @use 'utils';
 @use 'globals';
 
-// Main page
-@use 'blocks/header';
-@use 'blocks/footer';
-@use 'blocks/accordions';
-@use 'blocks/checkbox';
-@use 'blocks/dialog';
+// Layout
+@use 'components/layout/header';
+@use 'components/layout/footer';
+
+// UI
+@use 'components/ui/accordions';
+@use 'components/ui/checkbox';
+@use 'components/ui/dialog';
+
+// Sections
+@use 'components/section/team';
