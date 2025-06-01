@@ -68,41 +68,41 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 │   │   └──📁 video/                            # folder for video files
 │   │   ├──📃 favicon.ico                       # favicon
 │   ├── 📁components/                           # Components folder
-│   │   ├── 📁head/                            # Head components
-│   │   ├── 📁layout/                          # Layout components (header, footer)
-│   │   ├── 📁section/                         # Section components
-│   │   └── 📁ui/                              # UI components
+│   │   ├── 📁head/                             # Head components
+│   │   ├── 📁layout/                           # Layout components (header, footer)
+│   │   ├── 📁section/                          # Section components
+│   │   └── 📁ui/                               # UI components
 │   ├──📁js/                                    # Scripts
 │   │   └──📁 components/                       # js components
 │   │   ├──📁 functions/                        # File with ready-to-use js functions
 │   │   ├──📃 _components.js                    # component connection file
-│   │   └──📃 main.js                          # Main script
-│   ├── 📁styles/                              # Main styles folder
+│   │   └──📃 main.js                           # Main script
+│   ├── 📁styles/                               # Main styles folder
 │   │   └──📁components/                        # Style components
-│   │   │   ├── 📁layout/                      # Layout styles
-│   │   │   ├── 📁section/                     # Section styles
-│   │   │   └── 📁ui/                          # UI component styles
-│   │   └──📁helpers/                          # Helper styles
-│   │   ├──📃 _fonts.scss                      # File for connecting fonts
-│   │   ├──📃 _globals.scss                    # Global styles
-│   │   ├──📃 _normalize.scss                  # File with global tag reset
-│   │   ├──📃 _utils.scss                      # Utility styles
-│   │   ├──📃 _variables.scss                  # Global variables
-│   │   ├──📃 main.scss                        # Main stylesheet
-│   │   └──📃 vendor.scss                      # Vendor styles
-│   ├── 📁img/                                 # Images folder
-│   │   └──📁svg/                              # SVG files for sprite
-│   └── 📁pages/                               # HTML pages
+│   │   │   ├── 📁layout/                       # Layout styles
+│   │   │   ├── 📁section/                      # Section styles
+│   │   │   └── 📁ui/                           # UI component styles
+│   │   └──📁helpers/                           # Helper styles
+│   │   ├──📃 _fonts.scss                       # File for connecting fonts
+│   │   ├──📃 _globals.scss                     # Global styles
+│   │   ├──📃 _normalize.scss                   # File with global tag reset
+│   │   ├──📃 _utils.scss                       # Utility styles
+│   │   ├──📃 _variables.scss                   # Global variables
+│   │   ├──📃 main.scss                         # Main stylesheet
+│   │   └──📃 vendor.scss                       # Vendor styles
+│   ├── 📁img/                                  # Images folder
+│   │   └──📁svg/                               # SVG files for sprite
+│   └── 📁pages/                                # HTML pages
 ├── 📁app/                                      # Development build directory
 ├── 📁build/                                    # Production build directory
-└── 📃 gulpfile.js                             # Gulp configuration file
-└── 📃 package.json                            # Project dependencies and scripts
-└── 📃 .editorconfig                           # Editor configuration
-└── 📃 .ecrc                                   # Editorconfig-checker settings
-└── 📃 .prettierrc                             # Prettier settings
-└── 📃 SECURITY.md                             # Security guidelines
-└── 📃 LICENSE                                 # License information
-└── 📃 README.md                               # Project documentation
+└── 📃 gulpfile.js                              # Gulp configuration file
+└── 📃 package.json                             # Project dependencies and scripts
+└── 📃 .editorconfig                            # Editor configuration
+└── 📃 .ecrc                                    # Editorconfig-checker settings
+└── 📃 .prettierrc                              # Prettier settings
+└── 📃 SECURITY.md                              # Security guidelines
+└── 📃 LICENSE                                  # License information
+└── 📃 README.md                                # Project documentation
 ```
 
 ## 🔖 Working with HTML
