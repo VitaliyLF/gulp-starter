@@ -89,6 +89,21 @@ img {
   object-fit: cover;
   font-style: italic;
   user-select: none;
+  font-size: inherit;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+img[data-img-loading-error] {
+  --img-border-style: 0.25em solid
+    color-mix(in srgb, currentColor, transparent 75%);
+  --img-border-space: 1em;
+
+  border-inline-start: var(--img-border-style);
+  border-block-end: var(--img-border-style);
+  padding-inline-start: var(--img-border-space);
+  padding-block: var(--img-border-space);
+  max-width: 42ch;
 }
 
 abbr[title] {

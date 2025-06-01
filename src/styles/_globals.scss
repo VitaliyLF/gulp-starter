@@ -1,7 +1,6 @@
 @use 'helpers' as *;
 
 html {
-
   &.is-lock {
     overflow: hidden;
   }
@@ -102,7 +101,6 @@ svg * {
 }
 
 a {
-
   @include hover {
     color: var(--color-green);
   }
