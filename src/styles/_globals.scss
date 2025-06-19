@@ -110,3 +110,11 @@ a {
   outline: 2px dashed var(--color-light);
   outline-offset: 4px;
 }
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*) {
+  animation-duration: var(--transition-duration);
+}
