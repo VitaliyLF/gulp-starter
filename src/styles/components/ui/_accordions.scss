@@ -8,9 +8,6 @@
     margin-bottom: 20px;
   }
 
-  .alo {
-  }
-
   &__details {
     &[open] + .accordion__content {
       grid-template-rows: 1fr;
