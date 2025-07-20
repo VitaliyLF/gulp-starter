@@ -70,8 +70,7 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 │   ├── 📁components/                           # Components folder
 │   │   ├── 📁head/                             # Head components
 │   │   ├── 📁layout/                           # Layout components (header, footer)
-│   │   ├── 📁section/                          # Section components
-│   │   └── 📁ui/                               # UI components
+│   │   ├── 📁blocks/                           # Blocks components
 │   ├──📁js/                                    # Scripts
 │   │   └──📁 components/                       # js components
 │   │   ├──📁 functions/                        # File with ready-to-use js functions
@@ -81,7 +80,7 @@ Creates a temporary clone of the current repository, generates a gh-pages branch
 │   │   └──📁components/                        # Style components
 │   │   │   ├── 📁layout/                       # Layout styles
 │   │   │   ├── 📁section/                      # Section styles
-│   │   │   └── 📁ui/                           # UI component styles
+│   │   │   └── 📁blocks/                       # Blocks component styles
 │   │   └──📁helpers/                           # Helper styles
 │   │   ├──📃 _fonts.scss                       # File for connecting fonts
 │   │   ├──📃 _globals.scss                     # Global styles
