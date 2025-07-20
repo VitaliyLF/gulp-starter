@@ -4,28 +4,24 @@ $mobile: 767.98px;
 $mobile-s: 480.98px;
 
 @mixin laptop {
-
   @media (max-width: $laptop) {
     @content;
   }
 }
 
 @mixin tablet {
-
   @media (max-width: $tablet) {
     @content;
   }
 }
 
 @mixin mobile {
-
   @media (max-width: $mobile) {
     @content;
   }
 }
 
 @mixin mobile-s {
-
   @media (max-width: $mobile-s) {
     @content;
   }

@@ -7,7 +7,6 @@
 }
 
 .visually-hidden {
-
   @include visually-hidden;
 }
 
@@ -20,13 +19,13 @@
 
 // https://github.com/stefanjudis/css-scroll-shadows
 .scrollbox-shadow {
-  --gradient: radial-gradient(100% 6px at 50% 50%, #0002, #0000);
+  --gradient: radial-gradient(100% 6px at 50% 50%, #00000022, #00000000);
 
   background:
     linear-gradient(
-        #fff 10px,
-        #0000 40px calc(100% - 40px),
-        #fff calc(100% - 10px)
+        #ffffff 10px,
+        #00000000 40px calc(100% - 40px),
+        #ffffff calc(100% - 10px)
       )
       local,
     var(--gradient) top / 100% 200%,
@@ -36,8 +35,8 @@
 .skiplink {
   --skiplink-offset: 1.25rem;
   --skiplink-bg-color: var(--color-green);
-  --skiplink-overlay-color: hsl(0, 0%, 0%);
-  --skiplink-flashing-color: hsl(0, 0%, 100%);
+  --skiplink-overlay-color: hsl(0deg, 0%, 0%);
+  --skiplink-flashing-color: hsl(0deg, 0%, 100%);
   --skiplink-overlay-color-mix-a60: color-mix(
     in srgb,
     var(--skiplink-overlay-color),
@@ -82,7 +81,7 @@
     transition: box-shadow var(--transition-duration);
 
     &::before {
-      content: url(/img/skiplink-enter-icon.svg);
+      content: url('/img/skiplink-enter-icon.svg');
       margin-left: var(--skiplink-offset);
       order: 2;
       width: var(--skiplink-offset);
@@ -97,7 +96,6 @@
     }
 
     @keyframes pulse-btn-bg {
-
       100% {
         box-shadow: 0 0 0 20px rgba(193, 244, 246, 0);
       }
@@ -114,7 +112,6 @@
 }
 
 .overlay {
-
   @include tablet {
     opacity: 0;
     visibility: hidden;
@@ -157,6 +154,6 @@
 
 .text-bg-gradient {
   background: linear-gradient(90deg, rgb(158, 63, 58) 36%, rgb(52, 17, 142));
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }

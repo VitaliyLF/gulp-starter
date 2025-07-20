@@ -12,16 +12,16 @@
     width: 16px;
     aspect-ratio: 1;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #ffffff;
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
 
     &::before {
       content: '';
       position: absolute;
       inset: 0;
       background-color: green;
-      mask: url(/img/select-check-icon.svg) center / 100%;
+      mask: url("/img/select-check-icon.svg") center / 100%;
       scale: 0;
       transition:
         scale 0.3s ease-in-out,
@@ -29,7 +29,7 @@
     }
 
     &:checked::before {
-      mask: url(/img/select-check-icon.svg) no-repeat center / 100%;
+      mask: url("/img/select-check-icon.svg") no-repeat center / 100%;
       scale: 1;
     }
   }

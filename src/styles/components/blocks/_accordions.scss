@@ -8,6 +8,14 @@
     margin-bottom: 20px;
   }
 
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:
+      grid-template-rows 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
+  }
+
   &__details {
     &[open] + .accordion__content {
       grid-template-rows: 1fr;
@@ -22,14 +30,6 @@
   &__title {
     font-size: 24px;
     line-height: 1.2;
-  }
-
-  &__content {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition:
-      grid-template-rows 0.3s ease-in-out,
-      padding 0.3s ease-in-out;
   }
 
   &__inner {
