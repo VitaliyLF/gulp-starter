@@ -146,6 +146,7 @@ html {
 html,
 :has(:target) {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
